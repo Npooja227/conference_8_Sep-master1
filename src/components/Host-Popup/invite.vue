@@ -1,18 +1,20 @@
 <template>
-  <div>
+  <div class="p-4">
     <h4>Invite Guests</h4>
     <div class="mt-4 mx-2">
       <input class="form-control mt-3" placeholder="Enter Email" v-model="search" />
+   <div class="my-2 pt-1">
       <div class="mt-3 d-flex" v-for="(item,index) in filteredList" :key="index">
         <img v-if="item.image.length > 4" :src="item.image" />
-        <div style="height: 40px; width: 40px; border-radius: 50px; background-color: orange;" v-else>
+        <div class="invite-user" v-else>
           <p class="text-center text-white mt-1 h4">{{item.name.charAt(0)}}</p>
         </div>
         <div class="ml-3">
           <p class="mb-0 text-capitalize">{{item.name}}</p>
-          <small class="text-secondary">{{item.email}}</small>
+          <div class="font-14px mt-n1 text-grey-light">{{item.email}}</div>
         </div>
       </div>
+  </div>
     </div>
   </div>
 </template>
@@ -43,6 +45,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>

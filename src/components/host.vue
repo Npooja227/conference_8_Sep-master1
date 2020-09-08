@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal id="modal" ref="modal" hide-header hide-footer no-close-on-backdrop no-close-on-esc>
+    <b-modal id="modal" ref="modal" size="lg" modal-class="conference-modal" hide-header hide-footer no-close-on-backdrop no-close-on-esc>
       <button type="button" aria-label="Close" class="close" @click="hide()">×</button>
       <template>
         <LOGIN v-if="type == 'Login' || type == 'Signup'" :type="type" @messageFromChild="ChildComponentData"></LOGIN>

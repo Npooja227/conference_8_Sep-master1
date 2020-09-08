@@ -1,56 +1,74 @@
 <template>
-  <div class="landing-bg" :style="showHistory?'height: auto;':'height: 100%'">
-    <div v-if="showHistory" class="mr-5 float-right mt-3 text-primary">
-      <!--<img src="https://www.w3schools.com/howto/img_avatar2.png" class="profile-pic" v-if="userData.user_img">-->
-      <img :src="userData.user_img" class="profile-pic" v-if="userData.user_img">
-      <p :data-letters="userData.name.charAt(0)" v-else></p>
-    </div>
-    <div class="mr-5 float-right mt-3 text-primary" v-else>
-      <a @click="showModal('Login')" class="pointer text-white">Login</a>
-      <a @click="showModal('Signup')" class="ml-3 btn btn-sm pointer text-white" style="background-color: orange;">Signup</a>
-    </div>
-<div class="col-6 pt-5 pl-5">
-  <div class="header-text">
-    <h1 class="header-text-title">Secure, fully featured, and completely free video conferencing</h1>
-    <p class="header-text-description">
-      Go ahead, video chat with the whole team. In fact, invite everyone you
-      know. conference.ly is a fully encrypted, 100% open source video
-      conferencing solution that you can use all day, every day, for free —
-      with no account needed.
-    </p>
+<div class="landing-bg">
+<nav class="navbar navbar-expand-lg navbar-light d-flex sticky-top pb-lg-0 pt-0 my-0 conference-bg" id="header" style="">
+<ul id="headmenu" class="navbar-nav  w-100 py-3">
+<div class="container-fluid px-5 mx-2">
+  <a class="pt-0 pr-3" href="#">
+ <img src="https://i.ibb.co/G5TN4Cm/logo.png" alt="logo" border="0">
+</a>
+<div class="row ml-auto">
+<div class="col-md-12">
+<div class="ml-auto d-flex">
+    <template v-if="showHistory">
+        <img src="https://www.w3schools.com/howto/img_avatar2.png"  class="profile-pic" v-if="userData.user_img">
+      </template>
+        <template v-else>
+        <a @click="showModal('Login')" class="mr-3 mt-1 pointer small-text text-white">Login</a>
+        <a @click="showModal('Signup')" class="ml-2 btn btn-sm btn-block signup-btn" >Sign up</a>
+      </template>
+</div>
+</div>
+</div>
+</div></ul></nav>
+
+  <div class="container mt-5">
+    <div class="row">
+  <div class="col-5">
+    <!-- <img src="https://i.ibb.co/KV2VmSv/conference.png" alt="conference" border="0"> -->
+  <img src="https://i.ibb.co/80W82dD/conference2.png" alt="conference" border="0" class="img-fluid">
   </div>
-  <div class="border mt-1 p-4 d-inline-block" style="border-color: #555598 !important;background-color: #261252;">
-    <div class="d-flex">
-      <div class="col-5" style="border-right: 1px solid #294765 !important;">
-        <span style="color:orange">Start a free trail and</span>
-        <br />
-        <span>host a meeting now.</span>
-        <button type="button" class="btn mt-3 btn-lg mr-2" style="background-color: #6f2bff;color: white;" @click="showModal('Public')">Host a meeting</button>
-      </div>
-      <div class="col-7">
-        <p>
-          Did someone sent you meeting code? Please enter it and join the
-          meeting
+    <div class="col-6 pt-3 mt-3 ml-5">
+      <div>
+        <h3 class="conference-title">Secure, fully featured, and completely free video conferencing.</h3>
+        <p class="conference-text mt-3">
+          Go ahead, video chat with the whole team. In fact, invite everyone you
+          know. conference.ly is a fully encrypted, 100% open source video
+          conferencing solution that you can use all day, every day, for free —
+          with no account needed.
         </p>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Enter Code" />
-          <div class="input-group-append">
-            <span class="input-group-text">Join</span>
+      </div>
+      <div class="border mb-3 p-4 d-inline-block mt-3 hosting-section">
+        <div class="d-flex mt-2">
+          <div class="col-6 pr-30p" style="border-right: 1px solid #494984 !important;">
+           <span class="small-text"> <span class="text-orange">Start a free trail </span>and</span>
+            <span class="d-block small-text">host a meeting now.</span>
+            <button type="button" class="btn btn-block mt-3 btn-lg host-btn height-50p"  @click="showModal('Public')">Host a meeting</button>
+          </div>
+          <div class="col-6 pl-30p mt-1">
+            <p class="small-text">
+              Did someone sent you meeting code? Please enter it and join the
+              meeting
+            </p>
+            <div class="input-group join-btn">
+              <input type="text" class="form-control height-50p" placeholder="Enter Code"/>
+              <div class="input-group-append">
+                <span class="input-group-text btn">Join</span>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="float-right mt-4">
+          <p class="mb-0 conference-text">Do you want to schedule meeting later?
+             <span class="text-orange cursor-pointer">Click Here</span>
+          </p>
+          <span class="text-grey small-text float-right">by Schedule.ly</span>
+        </div>
+        <HOST :modal="modal" :type="type" @dataFromHost="HostComponentData"></HOST>
       </div>
+      <HISTORY v-if="showHistory"></HISTORY>
     </div>
-    <div class="float-right mt-4">
-      <p class="mb-0">
-        Do you want to schedule meeting later?
-        <span style="color:orange">Click Here</span>
-      </p>
-      <small class="text-secondary float-right">By Schedule.ly</small>
     </div>
-    <HOST :modal="modal" :type="type" @dataFromHost="HostComponentData"></HOST>
   </div>
-  <HISTORY v-if="showHistory"></HISTORY>
-</div>
   </div>
 </template>
 
@@ -108,64 +126,3 @@ export default {
   }
 }
 </script>
-<style>
-  .header .header-text {
-    display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-    margin-bottom: 0px;
-    max-width: calc(100% - 40px);
-    width: 50%;
-    z-index: 2;
-    max-width: 620px;
-  }
-
-  .header .header-text-title {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 1.18;
-    margin-bottom: 16px;
-    opacity: 1;
-  }
-
-  .header .header-text-description {
-    display: inherit;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 24px;
-    margin-bottom: 40px;
-    align-self: inherit;
-  }
-
-  .landing-bg {
-    /* background-image: url(https://1.bp.blogspot.com/-YLDLu1GApmQ/Tm-cKFIKE1I/AAAAAAAAEvQ/bp1zLkKJ6Cg/w1200-h630-p-k-no-nu/Purple+solid+color+backgrounds+1.png) !important; */
-    background-image: url(https://meeting.500apps.org/images/landing-bg.svg) !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
-  .profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-
-  [data-letters]:before {
-    content: attr(data-letters);
-    display: inline-block;
-    font-size: 1em;
-    width: 50px;
-    height: 50px;
-    line-height: 3em;
-    text-align: center;
-    border-radius: 50%;
-    background: plum;
-    vertical-align: middle;
-    margin-right: 1em;
-    color: white;
-    text-transform: capitalize;
-  }
-</style>

@@ -1,0 +1,452 @@
+.conference-title {
+	line-height: 3rem;
+	font-size: 34px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.conference-text {
+	color: #dbcbffb0;
+	font-size: 15.3px;
+}
+
+.landing-bg {
+	/* background-image: url(https://meeting.500apps.org/images/landing-bg.svg) !important; */
+	background-attachment: fixed;
+	background: #3f2971;
+}
+
+.profile-pic {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.signup-content .form-control {
+	display: block;
+	width: 100%;
+	font-weight: 400;
+	line-height: 1;
+	color: #495057;
+	background-color: #f4f8f7;
+	background-clip: padding-box;
+	border: 1px solid #f4f8f7;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+	height: auto!important;
+	padding: 13px!important;
+	border-radius: 2px;
+}
+
+.signup-content .form-control:focus {
+	background-color: #f4f8f7;
+	border: 1px solid #f4f8f7;
+}
+.form-control:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #ced4da;
+	box-shadow: none;
+}
+
+.signup-content .btn-primary,
+.host-meeting .btn-primary {
+	color: #FFF !important;
+	/* background-color: #7c48f2 !important;
+    border-color: #7c48f2 !important; */
+	background-color: #7c48f2 !important;
+	border-color: #7c48f2 !important;
+	font-size: 1.0625rem;
+	line-height: 0.6;
+	border-radius: 4px;
+	height: 48px !important;
+}
+
+.signup-content .btn-primary:focus {
+	color: #FFF !important;
+	/* background-color: #7c48f2 !important;
+    border-color: #7c48f2 !important; */
+	background-color: #7c48f2 !important;
+	border-color: #7c48f2 !important;
+	font-size: 1.0625rem;
+	line-height: 0.6;
+	border-radius: 4px;
+	height: 48px !important
+}
+
+.host-btn {
+	background-color: #7c48f2;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 2px;
+}
+
+.host-btn:focus {
+	box-shadow: none;
+}
+
+.host-btn:hover {
+	color: #fff;
+}
+
+.conference-modal .modal-dialog {
+	width: 780px !important;
+	min-height: calc(100% - (2rem * 2));
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.conference-modal .modal-content {
+	border-radius: 8px !important;
+}
+
+.conference-bg {
+	background-color: #3f2971;
+}
+
+.join-btn input,
+.join-btn input:focus {
+	background-color: #3f2971;
+	border: 1px solid #ced4da;
+	color: #fff;
+}
+
+.join-btn .input-group-text {
+	width: 70px;
+	place-content: center;
+	color: #3f2971;
+	font-weight: 500;
+	background-color: #fff;
+}
+
+.signup-btn {
+	background-color: #f98748;
+	border-radius: 2px;
+	width: 90.4px;
+	padding: 0.3rem 0.5rem;
+	font-size: 0.72rem;
+	line-height: 1.6;
+	color: #e0f3e8 !important;
+	font-weight: 400;
+}
+
+.text-orange {
+	color: orange !important;
+}
+
+.hosting-section {
+	border-color: #533792 !important;
+	background-color: #281354;
+	border-radius: 8px;
+}
+
+.height-50p {
+	height: 50px;
+}
+
+.pl-30p {
+	padding-left: 30px;
+}
+
+.pr-30p {
+	padding-right: 30px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.small-text {
+	color: #f3e6e6;
+	font-size: 11.4px;
+}
+
+.login-bg {
+	background-color: #3f2971;
+	height: 410px;
+	display: flex;
+	place-content: center;
+	align-items: center;
+	place-content: center;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.text-grey {
+	color: #5d507f !important;
+	font-weight: 500;
+}
+
+.conference-modal .modal-body {
+	padding: 0px !important;
+}
+
+.conference-modal .close {
+	right: 25px;
+	position: relative;
+	z-index: 10;
+	top: 11px;
+	font-weight: 400;
+	font-size: 30px;
+	opacity: 0.3;
+}
+
+.conference-modal .close:focus {
+	outline: none;
+}
+
+.host-meeting .border-bottom {
+	border-bottom: 1px solid #f5f9fd !important;
+}
+
+.fw-500 {
+	font-weight: 500;
+}
+
+.host-avatar {
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+}
+
+.host-meeting .input-group,
+.host-meeting .form-control {
+	height: 45px;
+}
+
+.host-meeting .form-control:disabled,
+.host-meeting .form-control[readonly],
+.input-group-text {
+	background-color: #f8f5ff;
+}
+
+.text-grey-light {
+	color: #afa4a4d1;
+}
+
+.enter-code-input,
+.enter-code-input:focus {
+	height: 32px !important;
+    border: 1px solid #eae2e2;
+}
+
+.enter-code-input::-webkit-input-placeholder {
+	color: #f1e6e6;
+}
+
+
+/* .enter-code-input:focus{
+    border: 1px solid #f1e6e6;
+} */
+
+.host-meeting .custom-control-input:checked~.custom-control-label::before {
+	color: #fff;
+	border-color: #7c48f2;
+	background-color: #7c48f2;
+}
+
+.host-meeting .custom-control-label::before {
+	background-color: #adb5bd;
+	border: #adb5bd solid 1px;
+}
+
+.host-meeting .custom-switch .custom-control-label::after {
+	background-color: #ffffff;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+}
+
+/*custom radio button */
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+	position: absolute;
+	left: -9999px;
+}
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+	position: relative;
+	padding-left: 28px;
+	cursor: pointer;
+	line-height: 20px;
+	display: inline-block;
+	color: #737373;
+}
+
+[type="radio"]:checked+label {
+	color: #7c48f2;
+}
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #ddd;
+	border-radius: 100%;
+	background: #fff;
+}
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	background: #7c48f2;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.text-purple {
+	color: #7c48f2 !important;
+}
+
+.host-meeting {
+	font-family: 'Roboto', sans-serif;
+}
+
+.font-14px {
+	font-size: 14px;
+}
+
+.bolder-text {
+	color: #505050;
+}
+
+.secure-meeting-text {
+	margin-top: 3px;
+	font-size: 13px;
+}
+
+.lock-icon {
+	height: 15px;
+	opacity: 0.5;
+}
+
+.invite-user {
+	height: 38px;
+	width: 38px;
+	border-radius: 50px;
+	background-color: orange;
+}
+.invite-user p{
+font-size: 1.10rem;
+line-height: 1.5;
+}
+
+
+
+.login-form .form-control {
+    padding-left: 2.375rem !important;
+}
+
+.login-form .form-control-feedback {
+		position: absolute;
+		z-index: 2;
+		display: block;
+		width: 2.375rem;
+		height: 3.0rem;
+		line-height: 2.375rem;
+		text-align: center;
+		pointer-events: none;
+		color: #aaa;
+		display: flex;
+		align-items: center;
+		place-content: center;
+		align-content: flex-start;
+}
+.signup-content .form-group{
+margin-bottom: 0.5rem !important;
+}
+
+
+.meeting-card{
+	background-color: #4f3687 !important;
+    border-radius: 8px;
+	border-color: #533792 !important;
+	font-family: 'Roboto', sans-serif;
+}
+
+.meeting-card .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, .meeting-card .nav-tabs .nav-link.active:hover {
+    color: #fff;
+    background-color: #4f3687;
+    border-color: #4f3687 #4f3687 #fff;
+    border-bottom-width: 3px;
+}
+.meeting-card .nav-tabs .nav-link:hover{
+	color: #fff;
+    background-color: #4f3687;
+	border-color:transparent;
+ border-bottom-width: 3px;
+}
+
+.meeting-card .nav-tabs .nav-link:focus{
+outline: none;
+}
+
+
+.meeting-card  .border-bottom {
+    border-bottom: 1px solid #5b458a !important;
+}
+
+.meeting-card .nav-tabs {
+	border-bottom: 1px solid #5b458a !important;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+.meeting-card .nav-item a {
+	color: #988ab8;
+}
+
+.meeting-card .nav-link {
+	padding: 0.5rem 0.60rem 0.5rem 0.25rem;
+	font-size: 17px;
+}
+.meeting-card .nav-link:nth-child(2) {
+	padding-left: 5rem;
+}
+
+.meeting-table:hover{
+background-color: #493081;
+}
+
+.meeting-card .nav-tabs .nav-item {
+    margin-right: 20px;
+}
+
+.meeting-table-text{
+color:#bfbebf;
+font-size:14px ;
+line-height: 14px;
+margin-top: 5px;
+}
+
+.px-2r{
+	padding-left: 1.8rem;
+	padding-right: 1.8rem;
+}
